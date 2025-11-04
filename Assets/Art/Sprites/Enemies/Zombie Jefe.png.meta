@@ -1,0 +1,507 @@
+fileFormatVersion: 2
+guid: 7a4c391f8a940c640b38605327016feb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2036629753808573858
+    second: Zombie Jefe_0
+  - first:
+      213: -6456133935575376945
+    second: Zombie Jefe_1
+  - first:
+      213: -412684051425657630
+    second: Zombie Jefe_2
+  - first:
+      213: -751096190617417569
+    second: Zombie Jefe_3
+  - first:
+      213: 3996746041376680064
+    second: Zombie Jefe_4
+  - first:
+      213: -1578626526245379817
+    second: Zombie Jefe_5
+  - first:
+      213: -5711568817559581435
+    second: Zombie Jefe_6
+  - first:
+      213: -3973002635055761534
+    second: Zombie Jefe_7
+  - first:
+      213: -2448462344791658383
+    second: Zombie Jefe_8
+  - first:
+      213: 1478623719180844270
+    second: Zombie Jefe_9
+  - first:
+      213: -6977967219606736359
+    second: Zombie Jefe_10
+  - first:
+      213: 2067188333138160967
+    second: Zombie Jefe_11
+  - first:
+      213: 3113374907733341715
+    second: Zombie Jefe_12
+  - first:
+      213: 3255804516953950031
+    second: Zombie Jefe_13
+  - first:
+      213: 975306202133130287
+    second: Zombie Jefe_14
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Zombie Jefe_0
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 25
+        width: 70
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a550c678ff834c10800000000000000
+      internalID: 2036629753808573858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zombie Jefe_1
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 25
+        width: 70
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcb5fa344643766a0800000000000000
+      internalID: -6456133935575376945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zombie Jefe_2
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 25
+        width: 70
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ecfd4eaa0ad54af0800000000000000
+      internalID: -412684051425657630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zombie Jefe_3
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 26
+        width: 70
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f98891e7ef19395f0800000000000000
+      internalID: -751096190617417569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zombie Jefe_4
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 25
+        width: 70
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 088a4b5595b477730800000000000000
+      internalID: 3996746041376680064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zombie Jefe_5
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 25
+        width: 70
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 711a22ec987971ae0800000000000000
+      internalID: -1578626526245379817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zombie Jefe_6
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 25
+        width: 70
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50dc92feb6e6cb0b0800000000000000
+      internalID: -5711568817559581435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zombie Jefe_7
+      rect:
+        serializedVersion: 2
+        x: 927
+        y: 25
+        width: 70
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2877fcd372f0dd8c0800000000000000
+      internalID: -3973002635055761534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zombie Jefe_8
+      rect:
+        serializedVersion: 2
+        x: 1055
+        y: 25
+        width: 70
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 170f5cc4870550ed0800000000000000
+      internalID: -2448462344791658383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zombie Jefe_9
+      rect:
+        serializedVersion: 2
+        x: 1183
+        y: 25
+        width: 70
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eecbd324070258410800000000000000
+      internalID: 1478623719180844270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zombie Jefe_10
+      rect:
+        serializedVersion: 2
+        x: 1311
+        y: 25
+        width: 70
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 912350dd8c7492f90800000000000000
+      internalID: -6977967219606736359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zombie Jefe_11
+      rect:
+        serializedVersion: 2
+        x: 1412
+        y: 25
+        width: 97
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74d288826d020bc10800000000000000
+      internalID: 2067188333138160967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zombie Jefe_12
+      rect:
+        serializedVersion: 2
+        x: 1537
+        y: 25
+        width: 100
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3167f04bbfde43b20800000000000000
+      internalID: 3113374907733341715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zombie Jefe_13
+      rect:
+        serializedVersion: 2
+        x: 1668
+        y: 25
+        width: 97
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f47072b45f0fe2d20800000000000000
+      internalID: 3255804516953950031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zombie Jefe_14
+      rect:
+        serializedVersion: 2
+        x: 1823
+        y: 25
+        width: 70
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2c616dc2dbf88d00800000000000000
+      internalID: 975306202133130287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Zombie Jefe_0: 2036629753808573858
+      Zombie Jefe_1: -6456133935575376945
+      Zombie Jefe_10: -6977967219606736359
+      Zombie Jefe_11: 2067188333138160967
+      Zombie Jefe_12: 3113374907733341715
+      Zombie Jefe_13: 3255804516953950031
+      Zombie Jefe_14: 975306202133130287
+      Zombie Jefe_2: -412684051425657630
+      Zombie Jefe_3: -751096190617417569
+      Zombie Jefe_4: 3996746041376680064
+      Zombie Jefe_5: -1578626526245379817
+      Zombie Jefe_6: -5711568817559581435
+      Zombie Jefe_7: -3973002635055761534
+      Zombie Jefe_8: -2448462344791658383
+      Zombie Jefe_9: 1478623719180844270
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
