@@ -4,7 +4,8 @@ using UnityEngine.SceneManagement;
 
 public class MenuPrincipal : UIPanel
 {
-    [SerializeField] private Button btnInicarJuego;
+    [SerializeField] private Button btnIniciarJuego;
+    [SerializeField] private Button btnSeleccionarNivel;
     [SerializeField] private Button btnSalirJuego;
     [SerializeField] private GestorUI gestor;
 
@@ -18,8 +19,12 @@ public class MenuPrincipal : UIPanel
             return;
         }
 
-        btnInicarJuego.onClick.RemoveAllListeners();
-        btnInicarJuego.onClick.AddListener(() => CargarNivel1());
+        btnIniciarJuego.onClick.RemoveAllListeners();
+        btnIniciarJuego.onClick.AddListener(() => CargarNivel1());
+
+        btnSeleccionarNivel.onClick.RemoveAllListeners();
+        btnSeleccionarNivel.onClick.AddListener(() => gestor.MostrarPaneles(1)); // muestra el panel SeleccionarNivel (índice 1)
+
         btnSalirJuego.onClick.RemoveAllListeners();
         btnSalirJuego.onClick.AddListener(() => gestor.Salir());
     }
