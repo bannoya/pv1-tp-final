@@ -22401,8 +22401,10 @@ GameObject:
   - component: {fileID: 1965592363}
   - component: {fileID: 1965592362}
   - component: {fileID: 1965592361}
-  - component: {fileID: 1965592364}
   - component: {fileID: 1965592365}
+  - component: {fileID: 1965592364}
+  - component: {fileID: 1965592366}
+  - component: {fileID: 1965592367}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -22553,7 +22555,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -22569,6 +22571,32 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1965592366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1965592360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19abc65c81dfbb146acb433296c5b019, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerInput
+--- !u!114 &1965592367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1965592360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa50b0cf8ecc0064580805bb3e99607c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerShoot
+  playerBullet: {fileID: 9030596284390307323, guid: 1cbf30ced92bb9e40819546e3fe572a0, type: 3}
+  playerCamera: {fileID: 841753305}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
