@@ -1,22 +1,25 @@
-using UnityEngine;
+﻿using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D), typeof(PlayerInput))]
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private readonly float moveSpeed = 5f;
+    public float moveSpeed = 5f;
+    private Rigidbody2D rb;
+    private Vector2 movement;
 
-    private UnityEngine.Rigidbody2D rb;
-    private PlayerInput input;
-
-    void Awake()
+    void Start()
     {
-        rb = GetComponent<UnityEngine.Rigidbody2D>();
-        input = GetComponent<PlayerInput>();
+        rb = GetComponent<Rigidbody2D>();
+    }
+
+    void Update()
+    {
+        // Movimiento con teclas WASD o flechas
+        movement.x = Input.GetAxisRaw("Horizontal");
+        movement.y = Input.GetAxisRaw("Vertical");
     }
 
     void FixedUpdate()
     {
-        rb.linearVelocity = input.MoveInput * moveSpeed;
-
+        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
 }
