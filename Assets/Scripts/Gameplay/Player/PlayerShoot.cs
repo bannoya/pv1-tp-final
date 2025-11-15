@@ -4,9 +4,17 @@ public class PlayerShoot : MonoBehaviour
 {
     public GameObject playerBullet;
     public Camera playerCamera;
+    
+    AudioManagerLevel1 audioManager;
 
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManagerLevel1>();
+    }
     public void Shoot()
     {
+        
+
         // Convertir la posición del mouse a coordenadas del mundo
         Vector3 mouseWorldPos = playerCamera.ScreenToWorldPoint(Input.mousePosition);
         mouseWorldPos.z = 0f;
@@ -30,5 +38,7 @@ public class PlayerShoot : MonoBehaviour
         PlayerBullet bulletScript = bullet.GetComponent<PlayerBullet>();
         if (bulletScript != null)
             bulletScript.Init(direction);
+
+        audioManager.PlaySFX(audioManager.shoot);
     }
 }
