@@ -1,4 +1,3 @@
-
 using UnityEngine;
 
 public class PlayerBullet : MonoBehaviour
@@ -20,17 +19,17 @@ public class PlayerBullet : MonoBehaviour
 
         if (rb != null)
         {
-            // Usar la propiedad correcta de Rigidbody2D
+            // Usar la propiedad correcta de Rigidbody2D 
             rb.linearVelocity = direction * bulletSpeed;
         }
         else
         {
-            // Fallback si no hay Rigidbody2D: mover con Transform
-            // Esto permite que la bala se mueva aunque falte el componente en la escena
+            // Fallback si no hay Rigidbody2D: mover con Transform 
+            // Esto permite que la bala se mueva aunque falte el componente en la escena 
             StartCoroutine(MoveWithoutRigidbody());
         }
 
-        // Destruir la bala después de lifeTime segundos para limpiar la escena
+        // Destruir la bala después de lifeTime segundos para limpiar la escena 
         Destroy(gameObject, lifeTime);
     }
 
@@ -59,17 +58,17 @@ public class PlayerBullet : MonoBehaviour
     {
         if (other == null) return;
 
-        // Ignorar colisiones con el jugador y con otras balas para evitar autodestrucción inmediata
+        // Ignorar colisiones con el jugador y con otras balas para evitar autodestrucción inmediata 
         if (other.CompareTag("Player") || other.CompareTag("PlayerBullet")) return;
 
-        // Destruir si pega a enemigos conocidos
+        // Destruir si pega a enemigos conocidos 
         if (other.CompareTag("ZombieMele") || other.CompareTag("ZombieRange"))
         {
             Destroy(gameObject);
             return;
         }
 
-        // Destruir en cualquier otra colisión que no sea explícitamente ignorada.
+        // Destruir en cualquier otra colisión que no sea explícitamente ignorada. 
         Destroy(gameObject);
     }
 }
