@@ -8,6 +8,7 @@ public class MenuPrincipal : UIPanel
     [SerializeField] private Button btnSeleccionarNivel;
     [SerializeField] private Button btnSalirJuego;
     [SerializeField] private GestorUI gestor;
+    AudioManagerMenu audioManager;
 
     public override void Mostrar()
     {
@@ -20,22 +21,37 @@ public class MenuPrincipal : UIPanel
         }
 
         btnIniciarJuego.onClick.RemoveAllListeners();
-        btnIniciarJuego.onClick.AddListener(() => CargarNivel1());
+        btnIniciarJuego.onClick.AddListener(() => {
+            audioManager.PlaySFX(audioManager.button);
+            CargarNivel1();
+            });
 
         btnSeleccionarNivel.onClick.RemoveAllListeners();
-        btnSeleccionarNivel.onClick.AddListener(() => gestor.MostrarPaneles(1)); // muestra el panel SeleccionarNivel (índice 1)
+        btnSeleccionarNivel.onClick.AddListener(() => {
+            audioManager.PlaySFX(audioManager.button);
+            gestor.MostrarPaneles(1);
+        });// muestra el panel SeleccionarNivel (índice 1)
 
         btnSalirJuego.onClick.RemoveAllListeners();
-        btnSalirJuego.onClick.AddListener(() => gestor.Salir());
+        btnSalirJuego.onClick.AddListener(() => {
+            audioManager.PlaySFX(audioManager.button);
+            gestor.Salir();
+        });
+
     }
 
     public override void Ocultar()
     {
         gameObject.SetActive(false);
+       
     }
 
     private void CargarNivel1()
     {
         SceneManager.LoadScene("Level01");
+    }
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManagerMenu>();
     }
 }
