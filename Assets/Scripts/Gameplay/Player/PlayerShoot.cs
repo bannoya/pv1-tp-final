@@ -17,7 +17,7 @@ public class PlayerShoot : MonoBehaviour
 
         // Convertir la posición del mouse a coordenadas del mundo
         Vector3 mouseWorldPos = playerCamera.ScreenToWorldPoint(Input.mousePosition);
-        mouseWorldPos.z = 0f;
+        
 
         // Calcular dirección normalizada hacia el mouse
         Vector2 direction = (mouseWorldPos - transform.position).normalized;
