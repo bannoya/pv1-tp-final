@@ -2,20 +2,31 @@
 
 public class ZombieMele : MonoBehaviour
 {
-    public string playerTag = "Player";   // Tag del jugador
+    public string playerTag = "Player"; // Tag del jugador
     public float velocidad = 2f;
     public float rangoAtaque = 1.5f;
     public float tiempoEntreAtaques = 1.2f;
-
-    private Transform player;
+    public int danoAtaque = 10;
     private float contadorAtaque;
-    [SerializeField] private Animator animator;
+    
+    private Transform player;
+    private PlayerHealth playerHealth;
+
+
+    [SerializeField]
+    private Animator animator;
+
     private SpriteRenderer spriteRenderer;
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag(playerTag)?.transform;
         spriteRenderer = GetComponent<SpriteRenderer>();
+
+        if (player != null)
+        {
+            playerHealth = player.GetComponent<PlayerHealth>();
+        }
     }
 
     void Update()
@@ -27,32 +38,31 @@ public class ZombieMele : MonoBehaviour
         // 🔁 Flip automático según la posición del jugador
         if (player.position.x > transform.position.x)
         {
-            // jugador a la derecha → mirar a la derecha
-            spriteRenderer.flipX = true;
+            spriteRenderer.flipX = true;   // Mirar derecha
         }
         else
         {
-            // jugador a la izquierda → mirar a la izquierda
-            spriteRenderer.flipX = false;
+            spriteRenderer.flipX = false;  // Mirar izquierda
         }
 
-        // 🚶‍♂️ Si está fuera del rango de ataque, moverse hacia el jugador
+        // 🚶‍♂️ Moverse si está fuera del rango de ataque
         if (distancia > rangoAtaque)
         {
             Vector2 direccion = (player.position - transform.position).normalized;
             transform.position += (Vector3)direccion * velocidad * Time.deltaTime;
+
             animator.SetBool("isWalking", true);
         }
         else
         {
-            // 🧟‍♂️ Si está dentro del rango, quedarse quieto y atacar
+            // 🧟‍♂️ Dentro del rango → detenerse y atacar
             animator.SetBool("isWalking", false);
-            contadorAtaque -= Time.deltaTime;
 
+            contadorAtaque -= Time.deltaTime;
             if (contadorAtaque <= 0f)
             {
-              
                 contadorAtaque = tiempoEntreAtaques;
+                playerHealth?.TakeDamage(danoAtaque);
             }
         }
     }

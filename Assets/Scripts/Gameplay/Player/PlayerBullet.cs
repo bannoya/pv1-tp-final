@@ -22,27 +22,13 @@ public class PlayerBullet : MonoBehaviour
             // Usar la propiedad correcta de Rigidbody2D 
             rb.linearVelocity = direction * bulletSpeed;
         }
-        else
-        {
-            // Fallback si no hay Rigidbody2D: mover con Transform 
-            // Esto permite que la bala se mueva aunque falte el componente en la escena 
-            StartCoroutine(MoveWithoutRigidbody());
-        }
+   
 
         // Destruir la bala después de lifeTime segundos para limpiar la escena 
         Destroy(gameObject, lifeTime);
     }
 
-    private System.Collections.IEnumerator MoveWithoutRigidbody()
-    {
-        float timer = 0f;
-        while (timer < lifeTime)
-        {
-            transform.Translate(direction * bulletSpeed * Time.deltaTime, Space.World);
-            timer += Time.deltaTime;
-            yield return null;
-        }
-    }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
