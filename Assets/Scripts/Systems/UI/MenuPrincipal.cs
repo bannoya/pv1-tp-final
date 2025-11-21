@@ -22,19 +22,19 @@ public class MenuPrincipal : UIPanel
 
         btnIniciarJuego.onClick.RemoveAllListeners();
         btnIniciarJuego.onClick.AddListener(() => {
-            audioManager.PlaySFX(audioManager.button);
-            CargarNivel1();
-            });
+            if (audioManager != null) audioManager.PlaySFX(audioManager.button);
+            IrAInstrucciones();
+        });
 
         btnSeleccionarNivel.onClick.RemoveAllListeners();
         btnSeleccionarNivel.onClick.AddListener(() => {
-            audioManager.PlaySFX(audioManager.button);
-            gestor.MostrarPaneles(1);
-        });// muestra el panel SeleccionarNivel (índice 1)
+            if (audioManager != null) audioManager.PlaySFX(audioManager.button);
+            gestor.MostrarPaneles(1); 
+        });
 
         btnSalirJuego.onClick.RemoveAllListeners();
         btnSalirJuego.onClick.AddListener(() => {
-            audioManager.PlaySFX(audioManager.button);
+            if (audioManager != null) audioManager.PlaySFX(audioManager.button);
             gestor.Salir();
         });
 
@@ -43,15 +43,19 @@ public class MenuPrincipal : UIPanel
     public override void Ocultar()
     {
         gameObject.SetActive(false);
-       
+    }
+    private void IrAInstrucciones()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("instructions");
     }
 
-    private void CargarNivel1()
-    {
-        SceneManager.LoadScene("Level01");
-    }
     private void Awake()
     {
-        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManagerMenu>();
+        GameObject audioObj = GameObject.FindGameObjectWithTag("Audio");
+        if (audioObj != null)
+        {
+            audioManager = audioObj.GetComponent<AudioManagerMenu>();
+        }
     }
 }
