@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
+using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(PlayerMovement))]
-[RequireComponent(typeof(PlayerShoot))] // 🔥 Asegura que haya un PlayerShoot en el mismo objeto
+[RequireComponent(typeof(PlayerShoot))]
 public class PlayerInput : MonoBehaviour
 {
     private PlayerMovement playerMovement;
@@ -24,6 +25,10 @@ public class PlayerInput : MonoBehaviour
         // Disparo con clic izquierdo
         if (Input.GetMouseButtonDown(0))
         {
+            // ⛔ Bloquear clics sobre la UI (como la barra de vida)
+            if (EventSystem.current.IsPointerOverGameObject())
+                return;
+
             playerShoot.Shoot();
         }
     }
