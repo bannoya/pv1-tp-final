@@ -276,3 +276,4 @@ MonoBehaviour:
   maxHP: 100
   hp: 0
   isAlive: 1
+  animator: {fileID: 374338235994250882}

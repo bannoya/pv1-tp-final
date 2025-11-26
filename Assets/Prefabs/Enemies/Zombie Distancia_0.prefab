@@ -310,6 +310,7 @@ MonoBehaviour:
   maxHP: 100
   hp: 0
   isAlive: 1
+  animator: {fileID: 4087148096157383685}
 --- !u!1 &8461664399025705948
 GameObject:
   m_ObjectHideFlags: 0
