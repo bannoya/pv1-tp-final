@@ -4,7 +4,7 @@ public class PlayerBullet : MonoBehaviour
 {
     public float bulletSpeed = 10f;
     public float lifeTime = 3f;
-    private float damage = 10f;
+    private float damage = 100f;
     [Header("Animación de destrucción")]
     [SerializeField] private Animator animator;      // Animator de la bala
     [SerializeField] private float destroyDelay = 0.2f; // Tiempo para que se vea la animación
