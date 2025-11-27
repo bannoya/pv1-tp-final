@@ -13,8 +13,19 @@ public class PlayerBullet : MonoBehaviour
     private Rigidbody2D rb;
     private bool isDestroying = false;              // Para no ejecutar destrucción 2 veces
 
+    [System.Obsolete]
     private void Awake()
     {
+        Collider2D col1 = GetComponent<Collider2D>();
+        Collider2D[] allColliders = FindObjectsOfType<Collider2D>();
+
+        foreach (Collider2D col in allColliders)
+        {
+            if (col != col1 && (col.CompareTag("ZombieBos") || col.CompareTag("Player")))
+            {
+                Physics2D.IgnoreCollision(col1, col);
+            }
+        }
         rb = GetComponent<Rigidbody2D>();
 
         // Por si te olvidás de arrastrar el Animator en el inspector

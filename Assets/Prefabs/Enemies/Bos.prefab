@@ -132,7 +132,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BossHealth
   maxHP: 500
   hp: 0
+  smoothSpeed: 5
   isAlive: 1
+  healthBar: {fileID: 0}
 --- !u!50 &2188312760008801723
 Rigidbody2D:
   serializedVersion: 5
@@ -145,7 +147,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 100
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 0
@@ -254,10 +256,10 @@ MonoBehaviour:
   chargeDuration: 1
   chargeStopDistance: 0.2
   meleeAnimDuration: 0.6
-  meleeHitTime: 0.25
+  meleeHitTime: 0
   vomitoPrefab: {fileID: 5028130402340068110, guid: 109f2d397cf61cd41bfd2f202f7aa09f, type: 3}
   firePoint: {fileID: 360927519162741402}
-  rangedDamage: 10
+  rangedDamage: 15
   rangedSpeed: 10
   rangedCooldown: 1.5
   animator: {fileID: 4485481715829244738}

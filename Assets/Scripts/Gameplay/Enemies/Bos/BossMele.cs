@@ -41,8 +41,20 @@ public class BossMele : MonoBehaviour
     private float rangedTimer = 0f;
     private float chargeTimer = 0f; // control interno para iniciar carga
 
+    [System.Obsolete]
     void Start()
     {
+        Collider2D col1 = GetComponent<Collider2D>();
+        Collider2D[] allColliders = FindObjectsOfType<Collider2D>();
+
+        foreach (Collider2D col in allColliders)
+        {
+            if (col != col1 && (col.CompareTag("ZombieRange") || col.CompareTag("ZombieMele")||col.CompareTag("Player")))
+            {
+                Physics2D.IgnoreCollision(col1, col);
+            }
+        }
+
         player = GameObject.FindGameObjectWithTag(playerTag)?.transform;
         if (player != null) playerHealth = player.GetComponent<PlayerHealth>();
         spriteRenderer = GetComponent<SpriteRenderer>();
