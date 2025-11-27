@@ -290,10 +290,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ZombieDistanciaMove
   playerTag: Player
   velocidad: 2
-  rangoAtaque: 4
+  rangoAtaque: 10
   balaPrefab: {fileID: 5028130402340068110, guid: 109f2d397cf61cd41bfd2f202f7aa09f, type: 3}
   puntoDisparo: {fileID: 2273706242952355033}
-  tiempoEntreDisparos: 0.5
+  tiempoEntreDisparos: 1.5
   animator: {fileID: 4087148096157383685}
 --- !u!114 &5929504599970760445
 MonoBehaviour:

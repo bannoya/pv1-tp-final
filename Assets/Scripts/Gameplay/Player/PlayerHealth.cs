@@ -1,9 +1,11 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
-
+using UnityEngine.SceneManagement;
 public class PlayerHealth : MonoBehaviour
 {
+    
+
     public int maxHealth = 100;
     public int currentHealth;
 
@@ -96,5 +98,6 @@ public class PlayerHealth : MonoBehaviour
     void Die()
     {
         Debug.Log("PLAYER MUERTO");
+        SceneManager.LoadScene("GameOver");
     }
 }

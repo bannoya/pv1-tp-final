@@ -8,6 +8,7 @@ TagManager:
   - ZombieMele
   - PlayerBullet
   - Audio
+  - ZombieBos
   layers:
   - Default
   - TransparentFX
