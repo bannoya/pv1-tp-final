@@ -4,13 +4,13 @@ public class ConditionalItemSpawner : MonoBehaviour
 {
     public GameObject itemPrefab;
     public Transform[] spawnPoints;
-    public PlayerHealth player; 
+    
 
     private bool itemSpawned = false;
-
+    public PlayerStats playerStats;
     void Update()
     {
-        if (!itemSpawned && player != null && player.currentHealth < 50)
+        if (!itemSpawned && playerStats.zombieKills >= 10)
         {
             SpawnItem();
         }

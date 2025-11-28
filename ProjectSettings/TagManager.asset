@@ -9,6 +9,7 @@ TagManager:
   - PlayerBullet
   - Audio
   - ZombieBos
+  - Vala_Vomito
   layers:
   - Default
   - TransparentFX

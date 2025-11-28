@@ -4,7 +4,7 @@ public class PlayerBullet : MonoBehaviour
 {
     public float bulletSpeed = 10f;
     public float lifeTime = 3f;
-    private float damage = 100f;
+    private float damage = 20f;
     [Header("Animación de destrucción")]
     [SerializeField] private Animator animator;      // Animator de la bala
     [SerializeField] private float destroyDelay = 0.2f; // Tiempo para que se vea la animación
@@ -71,8 +71,8 @@ public class PlayerBullet : MonoBehaviour
     {
         if (other == null || isDestroying) return;
 
-        // Ignorar colisiones con el jugador y con otras balas
-        if (other.CompareTag("Player") || other.CompareTag("PlayerBullet")) return;
+        // Ignorar colisiones con otras balas
+        if (other.CompareTag("PlayerBullet")) return;
 
         // Si pega a enemigos conocidos o cualquier otra cosa:
         ZombieHealth zombie = other.GetComponent<ZombieHealth>();

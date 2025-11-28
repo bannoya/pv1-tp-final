@@ -7,6 +7,11 @@ public class ZombieHealth : MonoBehaviour
     public bool isAlive = true;
     [SerializeField] private Animator animator;
     private bool isDead = false;
+    public PlayerStats playerStats;
+    private void Awake()
+    {
+        playerStats = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>();
+    }
 
     void Start()
     {
@@ -30,7 +35,8 @@ public class ZombieHealth : MonoBehaviour
     void Die()
     {
         if (isDead) return; // evita llamar dos veces
-
+        if (playerStats != null)
+            playerStats.zombieKills++;
         isDead = true;
 
         Debug.Log("Zombie muerto");
