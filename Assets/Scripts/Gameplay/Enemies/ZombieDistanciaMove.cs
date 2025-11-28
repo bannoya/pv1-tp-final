@@ -41,7 +41,7 @@ public class ZombieDistancia : MonoBehaviour
         {
             Vector2 direccion = (player.position - transform.position).normalized;
             transform.position += (Vector3)direccion * velocidad * Time.deltaTime;
-            animator.SetBool("isAtacking", false);
+            animator.SetBool("isAtacking", true);
         }
         else
         {
@@ -54,7 +54,7 @@ public class ZombieDistancia : MonoBehaviour
                 contadorDisparo = tiempoEntreDisparos;
             }
 
-            animator.SetBool("isAtacking", true);
+            animator.SetBool("isAtacking", false);
         }
     }
 }
