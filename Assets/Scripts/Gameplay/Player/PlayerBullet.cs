@@ -71,22 +71,25 @@ public class PlayerBullet : MonoBehaviour
     {
         if (other == null || isDestroying) return;
 
-        // Ignorar colisiones con otras balas
-        if (other.CompareTag("PlayerBullet")) return;
+        // Ignorar colisiones con balas (jugador y enemigo)
+        if (other.CompareTag("PlayerBullet") || other.CompareTag("EnemyBullet"))
+            return;
 
-        // Si pega a enemigos conocidos o cualquier otra cosa:
         ZombieHealth zombie = other.GetComponent<ZombieHealth>();
         BossHealth boss = other.GetComponent<BossHealth>();
+
         if (zombie != null)
-        {    
+        {
             zombie.TakeDamage(damage);
         }
         else if (boss != null)
         {
             boss.TakeDamage(damage);
         }
+
         StartDestroySequence();
     }
+
 
     private void StartDestroySequence()
     {

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1263259275419020969}
   m_Layer: 0
   m_Name: Bala Vomito_0
-  m_TagString: Vala_Vomito
+  m_TagString: EnemyBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
